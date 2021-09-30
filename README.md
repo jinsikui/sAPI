@@ -2,6 +2,7 @@
 
 * [概述](#概述)
 * [安装](#安装)
+* [Demo](#demo)
 * [使用](#使用)
    * [Objc](#objc)
    * [Swift](#swift)
@@ -30,6 +31,11 @@ pod 'sAPI',         :git => "https://github.com/jinsikui/sAPI.git", :tag => 'v1.
 在项目的plist文件中配置置 'Objective-C Bridging Header = xxx.h'，在xxx.h中添加一行：
 #import <sAPI/sAPI.h>
 ```
+
+## <a name="demo"></a> Demo
+
+直接下载本工程运行即可启动demo
+
 ## 使用
 
 ### <a name="objc"></a> - Objc 
