@@ -13,13 +13,13 @@
 
 ## 概述
 
-业务无关的链式API调用工具
+业务无关的链式API调用工具，支持 objc / swift
 
 ## 安装
 
 通过pod引用，在podfile增加下面一行，通过tag指定版本
 ```
-pod 'sAPI',         :git => "https://github.com/jinsikui/sAPI.git", :tag => 'v1.0.2-0'
+pod 'sAPI',         :git => "https://github.com/jinsikui/sAPI.git", :tag => 'v1.0.3-0'
 ```
  objc代码中引入：
 ```
@@ -57,18 +57,18 @@ sAPI.host(@"https://xxx.com")
 sAPI.host("https://xxx.com").method(sHTTPMethod.HTTP_GET)
    .path("/v1/\(roomId)/users")
    .execute().__onQueue(DispatchQueue.main, then:{ ret in
-         // process api ret in main thread
-         // 这里提取数据的类型转换有点繁琐，推荐用 SwiftyJSON 等三方库来处理json对象
-         let dic = ret as! [String : AnyObject]
-         let users = dic["users"] as! Array<[String : AnyObject]>
-         // do business logic ...
-         return nil
+        // process api ret in main thread
+        // 这里提取数据的类型转换有点繁琐，推荐用 SwiftyJSON 等三方库来处理json对象
+        let dic = ret as! [String : AnyObject]
+        let users = dic["users"] as! Array<[String : AnyObject]>
+        // do business logic ...
+        return nil
    }).__onQueue(DispatchQueue.main, catch:{ error in
-         // 错误处理
-         let error = error as NSError
-         let code = error.code
-         let errorMsg = error.userInfo[sAPIErrorMessageKey] //errorMsg could be ""
-         // do with error info ...
+        // 错误处理
+        let error = error as NSError
+        let code = error.code
+        let errorMsg = error.userInfo[sAPIErrorMessageKey] //errorMsg could be ""
+        // do with error info ...
    })
 ```
 
