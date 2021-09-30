@@ -16,6 +16,10 @@
 
 业务无关的链式API调用工具，支持 objc / swift
 
+底层网络访问基于 [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+
+异步返回处理基于google的 [promise](https://github.com/google/promises)
+
 ## 安装
 
 通过pod引用，在podfile增加下面一行，通过tag指定版本
