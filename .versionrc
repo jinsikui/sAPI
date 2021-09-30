@@ -1,0 +1,18 @@
+{
+  "packageFiles": [
+    {
+      "filename": "config.xcconfig",
+      "updater": "./updater.js"
+    }
+  ],
+  "bumpFiles": [
+    {
+      "filename": "config.xcconfig",
+      "updater": "./updater.js"
+    },
+    {
+      "filename": "sAPI.podspec",
+      "updater": "./updater.js"
+    }
+  ]
+}

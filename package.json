@@ -1,0 +1,20 @@
+{
+  "name": "sAPI",
+  "version": "1.0.0-0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinsikui/sAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "commit-msg": "node commit-msg.js"
+    }
+  },
+  "devDependencies": {
+    "husky": "^2.7.0"
+  }
+}
